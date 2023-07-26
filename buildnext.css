@@ -1,0 +1,71 @@
+body{
+    padding:50px 300px 0px 300px ;
+    background-color: #f4f8fa;
+}
+#container{
+    width: 800px;
+    height: max-content;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(53,105,128,.3), 0 6px 20px 0 rgba(165,200,213,.41);
+}
+#form h1{
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+input{
+    display: flex;
+    justify-content:space-between;
+    width: 320px;
+    height: 40px;
+    border: 1px solid #cbd6e2;
+    color: #33475b;
+    background-color: #f5f8fa;
+    border-radius: 3px;
+}
+select{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 40px;
+    border: 1px solid #cbd6e2;
+    color: #33475b;
+    background-color: #f5f8fa;
+    border-radius: 3px;
+    font-size: 18px;
+}
+p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #33475b;
+}
+button{
+    display: flex;
+    width: 100px;
+    height: 40px;
+    background-color: #3F6A83;
+    border: #3F6A83;
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 12px;
+    border-radius: 5%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+label{
+    font-size: 14px;
+    display: none;
+    color:#e51520;
+    font-weight: 500;
+}
+.required{
+    color: #e51520;
+    font-size: 18px;
+}
+@media screen and (min-width:450px) and (max-width:800px){
+    #container{
+        width: min-content;
+    }
+}

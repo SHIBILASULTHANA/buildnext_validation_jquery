@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="buildnext.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="img">
+            <img src="https://3324905.fs1.hubspotusercontent-na1.net/hubfs/3324905/Do%20you%20have%20your%20Plot%20Ready%20(7)-min.png"
+            class="img-fluid" alt="">
+        </div>
+        <div id="form">
+            <br>
+            <h1>Fill in your details & start constructing your dream home</h1>
+            <form action="">
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <p>First name<span class="required">*</span></p>
+                        <input type="text" id="fname" class="red_id">
+                        <label id="fname_label">Please complete this required field.</label>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p>Last name<span class="required">*</span></p>
+                        <input type="text" id="lname" class="red_id">
+                        <label id="lname_label">Please complete this required field.</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <p>Email<span class="required">*</span></p>
+                        <input type="text" id="email" class="red_id">
+                        <label id="email_label">Please complete this required field.</label>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p>Phone number<span class="required">*</span></p>
+                        <input type="text" id="no" class="red_id">
+                        <label id="no_label">Please complete this required field.</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <p>Do you have/own a plot?<span class="required">*</span></p>
+                        <select  class="red_id" id="plot" required>
+                            <option value="Please Select" selected >Please Select</option>
+                            <option value="">Yes</option>
+                            <option value="">No</option>
+                        </select>
+                        <label id="plot_label">Please select an option from the dropdown menu.</label>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p>Where are you planning to build your home?<span class="required">*</span></p>
+                        <select id="plan" class="red_id">
+                            <option value="Please Select"  selected>Please Select</option>
+                            <option value="">Kerala</option>
+                            <option value="">Telangana</option>
+                            <option value="">Karnataka</option>
+                            <option value="">Tamil Nadu</option>
+                        </select>
+                        <label id="plan_label">Please select an option from the dropdown menu.</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <p>When are you planning to start your construction?<span class="required">*</span> </p>
+                        <select id="start" class="red_id">
+                            <option value="Please Select" selected>Please Select</option>
+                            <option value="">Immediately</option>
+                            <option value="">In 3 Months</option>
+                            <option value="">In 6 Months</option>
+                            <option value="">More than 6 Months</option>
+                        </select>
+                        <label id="start_label">Please select an option from the dropdown menu.</label>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p>Choose your budget range<span class="required">*</span></p>
+                        <select id="budget" class="red_id">
+                            <option value="Please Select" selected>Please Select</option>
+                            <option value="">40-75 Lakhs</option>
+                            <option value="">75 Lakhs-1 Crore</option>
+                            <option value="">1 Crore & Above</option>
+                        </select>
+                        <label id="budget_label">Please select an option from the dropdown menu.</label>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <label id="submit_label">Please complete all required fields.</label>
+                        <br>
+                        <button type="button" id="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#fname").blur(function(){
+            var text=$(this).val();
+            if(text===""){
+                $("#fname").css("border-color","#e51520").show()
+                $("#fname_label").show()
+            }
+            else{
+                $("#fname").css("border-color","#cbd6e2").show()
+                $("#fname_label").hide()
+            }
+        });
+        $("#lname").blur(function(){
+            var text=$(this).val();
+            if(text===""){
+                $("#lname").css("border-color","#e51520").show()
+                $("#lname_label").show()
+            }
+            else{
+                $("#lname").css("border-color","#cbd6e2").show()
+                $("#lname_label").hide()
+            }
+        });
+        $("#email").blur(function(){
+            var text=$(this).val();
+            if(text===""){
+                $("#email").css("border-color","#e51520").show()
+                $("#email_label").show()
+            }
+            else{
+                $("#email").css("border-color","#cbd6e2").show()
+                $("#email_label").hide()
+            }
+        });
+        $("#no").blur(function(){
+            var text=$(this).val();
+            if(text===""){
+                $("#no").css("border-color","#e51520").show()
+                $("#no_label").show()
+            }
+            else{
+                $("#no").css("border-color","#cbd6e2").show()
+                $("#no_label").hide()
+            }
+        });
+        $("#plot").blur(function(){
+            var text=$(this).val();
+            if(text==="Please Select"){
+                $("#plot").css("border-color","#e51520").show()
+                $("#plot_label").show()
+            }
+            else{
+                $("#plot").css("border-color","#cbd6e2").show()
+                $("#plot_label").hide()
+            }
+        });
+        $("#plan").blur(function(){
+            var text=$(this).val();
+            if(text==="Please Select"){
+                $("#plan").css("border-color","#e51520").show()
+                $("#plan_label").show()
+            }
+            else{
+                $("#plan").css("border-color","#cbd6e2").show()
+                $("#plan_label").hide()
+            }
+        });
+        $("#start").blur(function(){
+            var text=$(this).val();
+            if(text==="Please Select"){
+                $("#start").css("border-color","#e51520").show()
+                $("#start_label").show()
+            }
+            else{
+                $("#start").css("border-color","#cbd6e2").show()
+                $("#start_label").hide()
+            }
+        });
+        $("#budget").blur(function(){
+            var text=$(this).val();
+            if(text==="Please Select"){
+                $("#budget").css("border-color","#e51520").show()
+                $("#budget_label").show()
+            }
+            else{
+                $("#budget").css("border-color","#cbd6e2").show()
+                $("#budget_label").hide()
+            }
+        });
+        $("#submit").click(function(){
+            let fname=$("#fname").val();
+            let lname=$("#lname").val();
+            let email=$("#email").val();
+            let no=$("#no").val();
+            let plot=$("#plot").val();
+            let plan=$("#plan").val();
+            let start=$("#start").val();
+            let budget=$("#budget").val();
+            if(fname===""||lname===""||email===""||no===""||plot==="Please Select"||plan==="Please Select"||start==="Please Select"||budget==="Please Select"){
+                $("#submit_label").show()
+            }else{
+                $("#submit_label").hide()
+            }
+            if(fname===""){
+                $("#fname").css("border-color","#e51520").show()
+                $("#fname_label").show()
+            }
+            else{
+                $("#fname").css("border-color","#cbd6e2").show()
+                $("#fname_label").hide()
+            }
+            if(lname===""){
+                $("#lname").css("border-color","#e51520").show()
+                $("#lname_label").show()
+            }
+            else{
+                $("#lname").css("border-color","#cbd6e2").show()
+                $("#lname_label").hide()
+            }
+            if(email===""){
+                $("#email").css("border-color","#e51520").show()
+                $("#email_label").show()
+            }
+            else{
+                $("#email").css("border-color","#cbd6e2").show()
+                $("#email_label").hide()
+            }
+            if(no===""){
+                $("#no").css("border-color","#e51520").show()
+                $("#no_label").show()
+            }
+            else{
+                $("#no").css("border-color","#cbd6e2").show()
+                $("#no_label").hide()
+            }
+            if(plot==="Please Select"){
+                $("#plot").css("border-color","#e51520").show()
+                $("#plot_label").show()
+            }
+            else{
+                $("#plot").css("border-color","#cbd6e2").show()
+                $("#plot_label").hide()
+            }
+            if(plan==="Please Select"){
+                $("#plan").css("border-color","#e51520").show()
+                $("#plan_label").show()
+            }
+            else{
+                $("#plan").css("border-color","#cbd6e2").show()
+                $("#plan_label").hide()
+            }
+            if(start==="Please Select"){
+                $("#start").css("border-color","#e51520").show()
+                $("#start_label").show()
+            }
+            else{
+                $("#start").css("border-color","#cbd6e2").show()
+                $("#start_label").hide()
+            }
+            if(budget==="Please Select"){
+                $("#budget").css("border-color","#e51520").show()
+                $("#budget_label").show()
+            }
+            else{
+                $("#budget").css("border-color","#cbd6e2").show()
+                $("#budget_label").hide()
+            }
+        })
+    });
+</script>
+</html>

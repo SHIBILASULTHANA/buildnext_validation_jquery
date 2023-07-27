@@ -64,8 +64,19 @@ label{
     color: #e51520;
     font-size: 18px;
 }
-@media screen and (min-width:450px) and (max-width:800px){
+@media (max-width:450px){
+    body{
+        padding:5px 10px 5px 10px;
+        overflow-x: hidden;
+    }
     #container{
-        width: min-content;
+        width:350px;
+        padding: 20px;
+    }
+    input{
+        width: 250px;
+    }
+    select{
+        width: 250px;
     }
 }

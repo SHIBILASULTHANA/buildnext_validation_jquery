@@ -3,7 +3,7 @@ body{
     background-color: #f4f8fa;
 }
 #container{
-    width: 800px;
+    width: 100%;
     height: max-content;
     padding: 50px;
     background-color: white;
@@ -78,5 +78,5 @@ label{
     }
     select{
         width: 250px;
-    }
+    } 
 }
